@@ -1,0 +1,51 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+{% include 'navbar.html' %}
+<style>
+    .containerglov {
+  width: 100%;
+  /* border: 1px solid #000; */
+  margin: 10px 10px;
+  padding: 10px 10px;
+}
+.ulul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    /* padding-left: 10px; */
+  }
+
+  .lili {
+    list-style: none;
+    display: inline-block;
+    /* width: 250px; */
+    /* height: 250px; */
+    /* padding: 2px 2px; */
+    margin: 1px 1px;
+    text-align: center;
+    /* border: 2px solid; */
+
+    /* box-shadow: 2px 2px gray; */
+  }
+
+</style>
+<body>
+  <center><h4>Global Explanations: Partial Dependence Plots</h4></center>
+
+<!-- {% for imageList in imageList %}
+<img src = "{{ url_for('static', filename=imageList)}}"> -->
+<!-- {% endfor %} -->
+<div class="containerglob">
+<ul class="ulul">
+
+    {% for imageList in imageList %}
+    
+    <!-- <li><img src="../images/images/feature_0.png" alt="image" srcset=""></li> -->
+    <li class="lili"><img src = "{{ url_for('static', filename=imageList)}}" height="250" width="250"></li>
+    {% endfor %}
+</ul>
+</div>
+</body>
